@@ -1,0 +1,24 @@
+---
+// Components
+import Link from './Link.astro';
+
+// Stylesheets
+import '../styles/footer.scss';
+
+// Variables
+const currentYear = new Date().getFullYear();
+---
+<footer>
+	<!-- Links to various social media accounts -->
+	<ul id="social-links">
+		<li>
+			<Link href="https://www.reddit.com/user/derpJava/" target="_blank">Reddit</Link>
+		</li>
+		<li>
+			<Link href="https://discord.com/users/1016332310741799054/" target="_blank">Discord</Link>
+		</li>
+	</ul>
+
+	<!-- Just a copyright for no reason -->
+	<p>&copy; {currentYear} Voxi0</p>
+</footer>

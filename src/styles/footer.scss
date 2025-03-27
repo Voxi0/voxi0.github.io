@@ -1,0 +1,37 @@
+@use "./globals.scss" as globals;
+
+footer {
+	// Shift the footer down slightly and center everything
+	margin-top: 2em;
+	text-align: center;
+
+	// Condense everything further
+	line-height: 0.5;
+
+	// Social media links e.g. Reddit
+	#social-links {
+		// Flexbox
+		display: flex;
+		justify-content: center;
+		gap: 0.5em;
+		padding: 0;
+
+		// Anchors and unordered lists
+		a {color: globals.$selectedColor;}
+		ul {list-style: none;}
+
+		// List items
+		li {
+			// Flexbox
+			display: flex;
+			align-items: center;
+
+			// Styling every list item that's not the last
+			&:not(:last-child)::after {
+				content: "•";
+				margin-left: 0.5em;
+				color: globals.$foregroundColor;
+			}
+		}
+	}
+}
