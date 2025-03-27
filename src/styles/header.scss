@@ -1,0 +1,44 @@
+@use "./globals.scss" as globals;
+
+header {
+	// Flexbox
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+
+	// My profile
+	#profile {
+		// Flexbox
+		display: flex;
+		align-items: center;
+		gap: 1em;
+
+		// Arrow cursor on hover
+		cursor: pointer;
+
+		// Username and pronouns
+		#userInfo {line-height: 0.5;}
+
+		// Profile picture
+		#pfp {
+			width: 64px;
+			height: auto;
+			border-radius: 50%;
+		}
+	}
+
+	// Navigation bar
+	nav {
+		display: flex;
+		gap: 1em;
+		a {
+			text-decoration: solid underline globals.$foregroundColor globals.$borderSize;
+			transition-duration: globals.$transitionDuration;
+			&:hover {
+				color: globals.$accentColor;
+				text-decoration-color: globals.$accentColor;
+			}
+		}
+	}
+}

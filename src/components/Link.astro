@@ -1,7 +1,7 @@
 ---
 // This component checks if the user is on the current page and adds an active class so we can style it
 
-// Astro
+// AstroJS
 import type { HTMLAttributes } from "astro/types";
 
 // Attributes - Used to pass data from where it"s used
@@ -13,7 +13,8 @@ const pathname = Astro.url.pathname.replace(import.meta.env.BASE_URL, "");
 const subpath = pathname.match(/[^\/]+/g);
 const isActive = href === pathname || href === "/" + (subpath?.[0] || "");
 ---
-<a href={href} class={`inline-block ${className} ${isActive ? 'underline text-primary' : ''}`} {...props}>
+<!-- Assign `active` class to anchor tag if it's referring to the current page that the user is on -->
+<a href={href} class={`${className} ${isActive ? "active" : ""}`} {...props}>
 	<!-- Anchor tag text -->
 	<slot/>
 </a>

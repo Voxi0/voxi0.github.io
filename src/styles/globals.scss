@@ -1,0 +1,54 @@
+// Fonts
+// Iosevka Aile
+@font-face {
+	font-family: "Iosevka";
+	src: url("/fonts/Iosevka/IosevkaNerdFont-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+// Variables
+$backgroundColor: rgb(0, 0, 0);
+$foregroundColor: rgb(255, 255, 255);
+$accentColor: rgb(255, 0, 0);
+$selectedColor: rgb(255, 0, 255);
+$borderColor: rgb(255, 255, 255);
+$borderSize: 1px;
+$borderRadius: 4px;
+$transitionDuration: 0.2s;
+
+// Global styles
+* {
+	background-color: $backgroundColor;
+	color: $foregroundColor;
+	font-family: "Iosevka", sans-serif;
+}
+html, body {
+	max-width: 150ch;
+	margin: 2em auto;
+}
+a {
+	color: inherit;
+	text-decoration: none;
+	display: inline-block;
+	&.active {
+		color: $selectedColor;
+		text-decoration-color: $selectedColor;
+	}
+}
+button {
+	background: transparent;
+	color: $foregroundColor;
+	border: $borderSize solid $borderColor;
+	border-radius: $borderRadius;
+	padding: 6px;
+	transition-duration: $transitionDuration;
+	&:hover {
+		cursor: pointer;
+		background-color: $foregroundColor;
+		color: $backgroundColor;
+	}
+}
+ul {
+	list-style: disc;
+}

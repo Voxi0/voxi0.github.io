@@ -1,0 +1,29 @@
+---
+// Layouts
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+
+// Stylesheets
+import "../styles/404.scss";
+
+// List of error messages from which we choose a random one
+const errorMessages = [
+	"Achievement Unlocked: How Did We Get Here?",
+	"Welcome To The Void",
+	"Want Some Coffee? 🍵",
+	"Poking Around The Wrong Places Are We?",
+	"Thou Shalt Not Enter",
+	":P",
+];
+
+// Randomly pick an error message from the array
+const randomMessage = errorMessages[Math.floor(Math.random() * errorMessages.length)];
+---
+<DefaultLayout title="404 - Page Not Found">
+	<div id="page-not-found">
+		<h1>{randomMessage}</h1>
+		<h2>404 - Page Not Found</h2>
+		<a target="_self" href="/">
+			<button>Go Back</button>
+		</a>
+	</div>
+</DefaultLayout>

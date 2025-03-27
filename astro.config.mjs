@@ -1,16 +1,8 @@
 // @ts-check
-import { defineConfig } from "astro/config";
-import mdx from "@astrojs/mdx";
-import sitemap from "@astrojs/sitemap";
+import { defineConfig } from 'astro/config';
 
-// Integrations/Plugins
-import tailwindcss from "@tailwindcss/vite";
-
-// Astro configuration
+// https://astro.build/config
 export default defineConfig({
-  site: "https://voxi0.github.io/",
-  integrations: [ mdx(), sitemap() ],
-  vite: {
-    plugins: [ tailwindcss() ],
-  },
+	site: 'https://voxi0.github.io/',
+	integrations: [],
 });
