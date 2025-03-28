@@ -1,5 +1,5 @@
 // Fonts
-// Iosevka Aile
+// Iosevka nerd font
 @font-face {
 	font-family: "Iosevka";
 	src: url("/fonts/Iosevka/IosevkaNerdFont-Regular.ttf");
@@ -8,24 +8,35 @@
 }
 
 // Variables
+// Colors
 $backgroundColor: rgb(0, 0, 0);
 $foregroundColor: rgb(255, 255, 255);
 $accentColor: rgb(255, 0, 0);
 $selectedColor: rgb(255, 0, 255);
 $borderColor: rgb(255, 255, 255);
+
+// Borders
 $borderSize: 1px;
 $borderRadius: 4px;
+
+// Transitions
 $transitionDuration: 0.2s;
 
 // Global styles
 * {
+	// Colors
 	background-color: $backgroundColor;
 	color: $foregroundColor;
+	accent-color: $accentColor;
+	caret-color: $accentColor;
+
+	// Font
 	font-family: "Iosevka", sans-serif;
 }
 html, body {
-	max-width: 150ch;
-	margin: 2em auto;
+	// Max width and margin
+	max-width: 90vw;
+	margin: 2vw auto;
 }
 a {
 	display: inline-block;
@@ -53,7 +64,4 @@ button {
 		background-color: $foregroundColor;
 		color: $backgroundColor;
 	}
-}
-ul {
-	list-style: disc;
 }

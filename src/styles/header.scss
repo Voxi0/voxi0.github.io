@@ -2,12 +2,13 @@
 
 header {
 	// Compress header slightly
-	max-width: 145ch;
+	width: 87vw;
 	margin: auto;
 
 	// Flexbox
 	display: flex;
 	flex-direction: row;
+	flex-wrap: nowrap;
 	justify-content: space-between;
 	align-items: center;
 
@@ -16,7 +17,7 @@ header {
 		// Flexbox
 		display: flex;
 		align-items: center;
-		gap: 1em;
+		gap: 12px;
 
 		// Arrow cursor on hover
 		cursor: pointer;
@@ -26,7 +27,7 @@ header {
 
 		// Profile picture
 		#pfp {
-			width: 64px;
+			width: 4vw;
 			height: auto;
 			border-radius: 50%;
 		}
