@@ -37,5 +37,8 @@ header {
 	nav {
 		display: flex;
 		gap: 1em;
+		a {
+			&:hover {text-decoration: solid underline globals.$borderSize;}
+		}
 	}
 }

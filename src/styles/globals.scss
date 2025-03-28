@@ -42,7 +42,6 @@ a {
 	display: inline-block;
 	color: inherit;
 	text-decoration: none;
-	transition-duration: $transitionDuration;
 	&:hover {
 		color: $accentColor;
 		text-decoration-color: $accentColor;
