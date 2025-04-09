@@ -1,42 +1,33 @@
 ---
 // AstroJS native components
-import { Image } from 'astro:assets';
+import { Image } from "astro:assets";
 
 // Components
-import Link from './Link.astro';
-
-// Stylesheets
-import '../styles/header.scss';
+import Link from "./Link.astro";
 
 // Images
-import profilePicture from '../images/pfp.png';
+import profilePicture from "../images/pfp.jpeg";
 ---
-<header>
+<header class="flex flex-nowrap justify-around items-center">
 	<!-- Profile -->
-	<a href="/">
-		<!-- My profile -->
-		<div id="profile">
-			<Image
-				id="pfp"
-				loading="eager"
-				decoding="async"
-				src={profilePicture}
-				alt="My profile"
-				format="png"
-				quality={100}
-			/>
-			<div id="userInfo">
-				<h3>Voxi0</h3>
-				<p>he/him</p>
-			</div>
-		</div>
+	<a href="/" class="flex items-center gap-2 cursor-pointer">
+		<Image
+			class="not-prose w-12 rounded-full"
+			loading="eager"
+			decoding="async"
+			src={profilePicture}
+			alt="My profile"
+			format="png"
+			quality={100}
+		/>
+		<h2 class="font-bold">Voxi0</h2>
 	</a>
 
 	<!-- Random art - "Borrowed" from `https://soph.systems/` :P -->
-	<h2>ᓚᘏᗢ</h2>
+	<h2 class="font-bold">ᓚᘏᗢ</h2>
 
 	<!-- Navigation bar -->
-	<nav>
+	<nav class="not-prose">
 		<Link href="/">home</Link>
 		<Link href="/about">about</Link>
 	</nav>

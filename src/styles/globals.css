@@ -1,0 +1,87 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography" {className: prose;}
+@config "./tailwind.config.js";
+
+/* Font faces */
+@font-face {
+	font-family: "Iosevka";
+	src: url("/fonts/Iosevka/IosevkaNerdFont-Regular.ttf");
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Theming */
+:root {
+	--borderSize: 1px;
+	--borderRadius: 4px;
+	--transitionDuration: 0.2s;
+}
+
+@theme {
+	/* Fonts */
+	--font-sans: "Iosevka", ui-sans-serif, sans-serif, "Segoe UI Emoji";
+	--font-serif: ui-serif, serif, "Times New Roman";
+	--font-mono: ui-monospace, monospace, "Liberation Mono";
+
+	/* Colors */
+	--color-*: initial;
+	--color-black: black;
+	--color-white: white;
+	--color-backgroundColor: black;
+	--color-foregroundColor: white;
+	--color-accentColor: red;
+	--color-selectedColor: rgb(255, 0, 255);
+	--color-borderColor: rgb(255, 255, 255);
+}
+
+@layer utilities {
+	/* Light mode*/
+	@media(prefers-color-scheme: light) {
+		html, body {@apply bg-backgroundColor text-foregroundColor;}
+		button {@apply bg-black text-white;}
+	}
+
+	/* Dark mode */
+	@media(prefers-color-scheme: dark) {
+		html, body {@apply bg-backgroundColor text-foregroundColor;}
+		button {@apply bg-transparent text-foregroundColor;}
+	}
+
+	/* Styling for every social media link in the footer */
+	.footer-social-media-links {
+		@apply flex justify-center gap-1 list-none;
+
+		/* Links */
+		a {@apply text-selectedColor;}
+
+		/* List items */
+		li {
+			@apply flex items-center;
+			&:not(:last-child)::after {@apply ml-1 content-["•"];}
+		}
+	}
+
+	/* Default elements */
+	html, body {
+		@apply mx-12 my-6;
+		@apply prose dark:prose-invert;
+		@apply prose-a:no-underline;
+		@apply prose-hr:my-4;
+		@apply prose-headings:m-0 prose-headings:font-light prose-h1:font-bold;
+		@apply max-w-none;
+	}
+	nav {
+		@apply flex gap-2;
+		a {&:hover {@apply decoration-solid underline decoration-[borderSize];}}
+	}
+	a {
+		@apply inline-block;
+		&:hover {@apply text-accentColor decoration-accentColor;}
+		&.active {@apply text-selectedColor decoration-selectedColor;}
+	}
+	button {
+		@apply border border-solid border-borderColor rounded-[var(--borderRadius)];
+		@apply px-4 py-1 duration-[var(--transitionDuration)];
+		&:hover {@apply bg-foregroundColor text-backgroundColor cursor-pointer px-20;}
+	}
+}

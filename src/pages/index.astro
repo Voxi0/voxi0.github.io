@@ -1,9 +1,6 @@
 ---
 // Layouts
-import DefaultLayout from '../layouts/DefaultLayout.astro';
-
-// Stylesheets
-import '../styles/style.scss';
+import DefaultLayout from "../layouts/DefaultLayout.astro";
 
 // Variables
 const currentYear = new Date().getFullYear();
@@ -21,18 +18,20 @@ const favGames = [
 ];
 ---
 <DefaultLayout title="Voxi0" description="My personal website">
-	<h1>🌠 Hi! I'm Voxi0</h1>
-	<p>
-		I'm a {currentYear - 2009} year old computer science, programming and Linux enthusiast, I use NixOS btw :p
-		I currently live in {currentCountry} but I was born in Bangladesh and lived there for about 13 years before moving.
-	</p>
+	<article>
+		<h1>🌠 Hi! I'm Voxi0</h1>
+		<p>
+			I'm a {currentYear - 2009} year old computer science, programming and Linux enthusiast, I use NixOS btw :p
+			I currently live in {currentCountry} but I was born in Bangladesh and lived there for about 13 years before moving.
+		</p>
 
-	<!-- Unordered lists of favourite stuff -->
-	<h2>Favourites</h2>
+		<!-- Unordered lists of favourite stuff -->
+		<h2>Favourites</h2>
 
-	<!-- Favourite games -->
-	<h3>Games</h3>
-	<ul>
-		{favGames.map(game => <li>{game}</li>)}
-	</ul>
+		<!-- Favourite games -->
+		<h3>Games</h3>
+		<ul>
+			{favGames.map(game => <li>{game}</li>)}
+		</ul>
+	</article>
 </DefaultLayout>
