@@ -19,8 +19,10 @@ const { title, description } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<!-- Preload assets for performance -->
-		<link rel="preload" href="/fonts/Iosevka/IosevkaNerdFont-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+		<!-- Preload/Prefetch assets/pages for performance -->
+		<link rel="preload" href="/fonts/Iosevka/IosevkaNerdFont-Regular.woff2" as="font" type="font/woff2" crossorigin>
+		<link rel="prefetch" href="/" as="document">
+		<link rel="prefetch" href="/about" as="document">
 
 		<!-- Canonical URL - Helps search engines to index the correct URL and avoid duplicate content -->
 		<link rel="canonical" href={canonicalURL}>
