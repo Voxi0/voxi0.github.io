@@ -9,7 +9,7 @@ import profilePictureAvif from "../images/pfp.avif";
 	<!-- Profile -->
 	<a href="/" class="flex items-center gap-2 cursor-pointer">
 		<Image
-			class="not-prose w-12 rounded-full"
+			class="w-12 rounded-full"
 			loading="eager"
 			decoding="async"
 			src={profilePictureAvif}
@@ -17,14 +17,18 @@ import profilePictureAvif from "../images/pfp.avif";
 			format="avif"
 			quality={50}
 		/>
-		<h2 class="font-bold">Voxi0</h2>
+		<article class="prose">
+			<h2 class="font-bold">Voxi0</h2>
+		</article>
 	</a>
 
 	<!-- Random art - "Borrowed" from `https://soph.systems/` :P -->
-	<h2 class="font-bold">ᓚᘏᗢ</h2>
+	<article class="prose">
+		<h2 class="font-bold">ᓚᘏᗢ</h2>
+	</article>
 
 	<!-- Navigation bar -->
-	<nav class="not-prose">
+	<nav>
 		<a href="/" target="_self">home</a>
 		<a href="/about" target="_self">about</a>
 	</nav>

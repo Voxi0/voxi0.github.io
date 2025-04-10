@@ -47,6 +47,13 @@
 		button {@apply bg-black text-foregroundColor;}
 	}
 
+	.prose {
+		@apply max-w-none dark:prose-invert;
+		@apply prose-headings:m-0 prose-headings:font-light prose-h1:font-bold;
+		@apply prose-hr:my-4;
+		@apply prose-a:no-underline;
+	}
+
 	/* Styling for every social media link in the footer */
 	.footer-social-media-links {
 		@apply flex justify-center gap-1 list-none;
@@ -64,11 +71,6 @@
 	/* Default elements */
 	html, body {
 		@apply mx-12 my-6;
-		@apply prose dark:prose-invert;
-		@apply prose-a:no-underline;
-		@apply prose-hr:my-4;
-		@apply prose-headings:m-0 prose-headings:font-light prose-h1:font-bold;
-		@apply max-w-none;
 	}
 	nav {
 		@apply flex gap-2;

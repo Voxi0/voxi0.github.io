@@ -19,12 +19,18 @@ const { title, description } = Astro.props;
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<!-- Preload assets for performance -->
+		<link rel="preload" href="/fonts/Iosevka/IosevkaNerdFont-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+
+		<!-- Canonical URL - Helps search engines to index the correct URL and avoid duplicate content -->
+		<link rel="canonical" href={canonicalURL}>
+		<meta property="og:url" content={canonicalURL}>
+
 		<!-- Global metadata -->
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width,initial-scale=1">
 		<meta name="generator" content={Astro.generator}>
 		<link rel="sitemap" href="/sitemap-index.xml">
-		<link rel="alternate" type="application/rss+xml" title={title} href={new URL("rss.xml", Astro.site)}>
 
 		<!-- Favicon -->
 		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -32,13 +38,11 @@ const { title, description } = Astro.props;
 		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 		<link rel="manifest" href="/site.webmanifest">
 
-		<!-- Preload fonts for performance -->
-		<link rel="preload" href="/fonts/Iosevka/IosevkaNerdFont-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
-
-		<!-- Canonical URL - Helps search engines to index the correct URL and avoid duplicate content -->
-		<link rel="canonical" href={canonicalURL}>
-
-		<!-- Website title and description -->
+		<!-- Set title and description -->
+		<meta property="og:title" content={title}>
+		<meta property="og:description" content={description}>
+		<meta name="twitter:title" content={title}>
+		<meta name="twitter:description" content={description}>
 		<meta name="title" content={title}>
 		<meta name="description" content={description}>
 		<title>{title}</title>
