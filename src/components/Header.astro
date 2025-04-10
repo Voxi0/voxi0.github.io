@@ -2,9 +2,6 @@
 // AstroJS native components
 import { Image } from "astro:assets";
 
-// Components
-import Link from "./Link.astro";
-
 // Images
 import profilePictureAvif from "../images/pfp.avif";
 ---
@@ -28,7 +25,7 @@ import profilePictureAvif from "../images/pfp.avif";
 
 	<!-- Navigation bar -->
 	<nav class="not-prose">
-		<Link href="/">home</Link>
-		<Link href="/about">about</Link>
+		<a href="/" target="_self">home</a>
+		<a href="/about" target="_self">about</a>
 	</nav>
 </header>
