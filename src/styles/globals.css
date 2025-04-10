@@ -5,9 +5,10 @@
 /* Font faces */
 @font-face {
 	font-family: "Iosevka";
-	src: url("/fonts/Iosevka/IosevkaNerdFont-Regular.ttf");
+	src: url("/fonts/Iosevka/IosevkaNerdFont-Regular.woff2") format("woff2");
 	font-weight: normal;
 	font-style: normal;
+	font-display: swap;
 }
 
 /* Theming */
@@ -26,7 +27,6 @@
 	/* Colors */
 	--color-*: initial;
 	--color-black: black;
-	--color-white: white;
 	--color-backgroundColor: black;
 	--color-foregroundColor: white;
 	--color-accentColor: red;
@@ -38,13 +38,13 @@
 	/* Light mode*/
 	@media(prefers-color-scheme: light) {
 		html, body {@apply bg-backgroundColor text-foregroundColor;}
-		button {@apply bg-black text-white;}
+		button {@apply bg-black text-foregroundColor;}
 	}
 
 	/* Dark mode */
 	@media(prefers-color-scheme: dark) {
 		html, body {@apply bg-backgroundColor text-foregroundColor;}
-		button {@apply bg-transparent text-foregroundColor;}
+		button {@apply bg-black text-foregroundColor;}
 	}
 
 	/* Styling for every social media link in the footer */

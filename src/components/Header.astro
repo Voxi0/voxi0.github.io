@@ -6,19 +6,18 @@ import { Image } from "astro:assets";
 import Link from "./Link.astro";
 
 // Images
-import profilePicture from "../images/pfp.jpeg";
+import profilePictureAvif from "../images/pfp.avif";
 ---
 <header class="flex flex-nowrap justify-around items-center">
 	<!-- Profile -->
 	<a href="/" class="flex items-center gap-2 cursor-pointer">
 		<Image
 			class="not-prose w-12 rounded-full"
-			loading="eager"
 			decoding="async"
-			src={profilePicture}
+			src={profilePictureAvif}
 			alt="My profile"
-			format="png"
-			quality={100}
+			format="avif"
+			quality={50}
 		/>
 		<h2 class="font-bold">Voxi0</h2>
 	</a>

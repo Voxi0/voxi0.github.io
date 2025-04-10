@@ -1,13 +1,14 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
 
-// Tailwind
+// Astro integrations and plugins
 import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
 
-// https://astro.build/config
+// Astro configuration
 export default defineConfig({
   site: 'https://voxi0.github.io/',
-  integrations: [],
+  integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],
   },
