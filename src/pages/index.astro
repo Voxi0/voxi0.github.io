@@ -3,7 +3,6 @@
 import DefaultLayout from "../layouts/DefaultLayout.astro";
 
 // Variables
-const currentYear = new Date().getFullYear();
 const currentCountry = "the United Kingdom";
 const favGames = [
 	"Doom 1 and 2",
@@ -21,7 +20,7 @@ const favGames = [
 	<article class="prose">
 		<h1>🌠 Hi! I'm Voxi0</h1>
 		<p>
-			I'm a {currentYear - 2009} year old computer science, programming and Linux enthusiast, I use NixOS btw :p
+			I'm a {new Date().getFullYear() - 2009} year old computer science, programming and Linux enthusiast, I use NixOS btw :p
 			I currently live in {currentCountry} but I was born in Bangladesh and lived there for about 13 years before moving.
 		</p>
 
