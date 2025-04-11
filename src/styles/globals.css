@@ -20,9 +20,9 @@
 
 @theme {
 	/* Fonts */
-	--font-sans: "Iosevka", ui-sans-serif, sans-serif, "Segoe UI Emoji";
-	--font-serif: ui-serif, serif, "Times New Roman";
-	--font-mono: ui-monospace, monospace, "Liberation Mono";
+	--font-sans: "Iosevka", sans-serif;
+	--font-serif: serif;
+	--font-mono: monospace;
 
 	/* Colors */
 	--color-*: initial;

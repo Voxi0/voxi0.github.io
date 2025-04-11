@@ -19,3 +19,6 @@ pnpm-debug.log*
 # IDE specific folders
 .idea/
 .vscode/
+
+# Unlighthouse - Used to analyze a website for issues and best tips
+.unlighthouse
