@@ -4,11 +4,11 @@
 
 /* Font faces */
 @font-face {
-	font-family: "Iosevka";
-	src: url("/fonts/Iosevka/IosevkaNerdFont-Regular.woff2") format("woff2");
+	font-family: "JetBrains-NerdFont-Regular";
+	src: url("/fonts/JetBrainsMono/JetBrainsMonoNerdFont-Regular.woff2") format("woff2");
+	font-display: swap;
 	font-weight: normal;
 	font-style: normal;
-	font-display: swap;
 }
 
 /* Theming */
@@ -20,7 +20,7 @@
 
 @theme {
 	/* Fonts */
-	--font-sans: "Iosevka", sans-serif;
+	--font-sans: "JetBrains-NerdFont-Regular", sans-serif;
 	--font-serif: serif;
 	--font-mono: monospace;
 
