@@ -1,0 +1,23 @@
+@import url("https://fonts.googleapis.com/css2?family=Yarndings+20&display=swap");
+@import "tailwindcss";
+
+/* Fonts */
+@font-face {
+  font-family: "RobotoSlab-Regular";
+  src: url("/fonts/roboto-slab/RobotoSlab-Regular.ttf") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+/* Colors and typography */
+@theme {
+  /* Fonts */
+  --font-yarndings: "Yarndings 20";
+  --font-roboto-slab: "RobotoSlab-Regular";
+
+  /* Colors */
+  --color-*: initial;
+  --color-bg: #000;
+  --color-fg: #fff;
+}

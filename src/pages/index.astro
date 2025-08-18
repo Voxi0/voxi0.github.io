@@ -1,0 +1,14 @@
+---
+import { Image } from "astro:assets";
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import pfp from "../assets/pfp.webp";
+---
+<DefaultLayout title="Voxi0">
+  <header class="flex items-center justify-center">
+    <Image src={pfp} alt="My profile picture" width=64 height=64 class="rounded-full m-2"/>
+    <h1 class="text-3xl">Voxi0</h1>
+  </header>
+  <footer>
+    <p class="text-center font-yarndings">looking for something?</p>
+  </footer>
+<DefaultLayout/>

@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+import robotoSlabRegular from "/fonts/roboto-slab/RobotoSlab-Regular.ttf";
+const { title } = Astro.props;
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta tags -->
+		<meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width"/>
+    <meta name="generator" content={Astro.generator}/>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
+
+    <!-- Preload assets -->
+    <link rel="preload" type="font/ttf" as="font" crossorigin="anonymous" href={robotoSlabRegular}>
+
+    <!-- Website title -->
+    <title>{title}</title>
+	</head>
+	<body class="bg-bg text-fg">
+		<slot/>
+	</body>
+</html>
