@@ -1,23 +1,29 @@
-@import url("https://fonts.googleapis.com/css2?family=Yarndings+20&display=swap");
 @import "tailwindcss";
 
 /* Fonts */
 @font-face {
-  font-family: "RobotoSlab-Regular";
-  src: url("/fonts/roboto-slab/RobotoSlab-Regular.ttf") format("truetype");
-  font-style: normal;
-  font-weight: 400;
+  font-family: "Roboto Slab";
+  src: url("/fonts/roboto-slab/RobotoSlab-Regular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Yarndings";
+  src: url("/fonts/Yarndings20-Regular.woff2") format("woff2");
   font-display: swap;
 }
 
 /* Colors and typography */
 @theme {
   /* Fonts */
-  --font-yarndings: "Yarndings 20";
-  --font-roboto-slab: "RobotoSlab-Regular";
+  --font-yarndings: "Yarndings";
 
   /* Colors */
   --color-*: initial;
-  --color-bg: #000;
-  --color-fg: #fff;
+}
+
+/* Global styles */
+:root {
+  background-color: #000;
+  color: #fff;
+  font-family: "Roboto Slab", serif;
 }

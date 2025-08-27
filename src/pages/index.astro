@@ -5,10 +5,17 @@ import pfp from "../assets/pfp.webp";
 ---
 <DefaultLayout title="Voxi0">
   <header class="flex items-center justify-center">
-    <Image src={pfp} alt="My profile picture" width=64 height=64 class="rounded-full m-2"/>
+    <Image
+        priority
+        loading="eager"
+        densities={[1.5, 2]}
+        src={pfp}
+        alt="Profile"
+        class="rounded-full m-2"
+    />
     <h1 class="text-3xl">Voxi0</h1>
   </header>
   <footer>
-    <p class="text-center font-yarndings">looking for something?</p>
+    <h1 class="font-yarndings text-center text-md">curious much?</h1>
   </footer>
-<DefaultLayout/>
+</DefaultLayout>
