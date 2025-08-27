@@ -7,6 +7,9 @@ dist/
 # Dependencies
 node_modules/
 
+# Unlighthouse - Used to measure site performance and such
+.unlighthouse
+
 # Logs
 yarn-debug.log*
 yarn-error.log*

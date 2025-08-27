@@ -13,7 +13,7 @@
       pkgs = inputs.nixpkgs.legacyPackages.${system};
     in {
       devShells.default = pkgs.mkShellNoCC {
-        nativeBuildInputs = with pkgs; [nodejs bun];
+        nativeBuildInputs = with pkgs; [nodejs bun chromium];
       };
     });
 }
