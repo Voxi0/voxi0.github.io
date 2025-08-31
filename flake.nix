@@ -14,6 +14,11 @@
     in {
       devShells.default = pkgs.mkShellNoCC {
         nativeBuildInputs = with pkgs; [nodejs bun chromium];
+        shellHook = ''
+          # Update everything
+          bun update
+          npx @astrojs/upgrade
+        '';
       };
     });
 }

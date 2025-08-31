@@ -11,9 +11,10 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator}/>
     <meta name="description" content="My personal website"/>
 
-    <!-- Preload assets, set canonical link, sitemap and favicon -->
-    <link rel="preload" href="/fonts/Yarndings20-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
-    <link rel="preload" href="/fonts/roboto-slab/RobotoSlab-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous"/>
+    <!-- Preload/Prefetch assets -->
+    <link rel="preload" href="/fonts/roboto-slab/RobotoSlab-Regular.woff2" as="font" type="font/woff2" crossorigin/>
+
+    <!-- SEO -->
     <link rel="canonical" href="https://voxi0.github.io/"/>
     <link rel="sitemap" href="/sitemap-index.xml"/>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>

@@ -4,18 +4,38 @@ import DefaultLayout from "../layouts/DefaultLayout.astro";
 import pfp from "../assets/pfp.webp";
 ---
 <DefaultLayout title="Voxi0">
-  <header class="flex items-center justify-center">
-    <Image
-        priority
-        loading="eager"
-        densities={[1.5, 2]}
-        src={pfp}
-        alt="Profile"
-        class="rounded-full m-2"
-    />
-    <h1 class="text-3xl">Voxi0</h1>
+  <header class="flex justify-center my-4">
+    <a href="/" class="flex items-center">
+      <Image
+          priority
+          loading="eager"
+          densities={[1.5, 2]}
+          src={pfp}
+          alt="Voxi0's profile"
+          class="rounded-full m-2"
+      />
+      <h1>Voxi0</h1>
+    </a>
   </header>
-  <footer>
-    <h1 class="font-yarndings text-center text-md">curious much?</h1>
+
+  <main class="md:mx-8 lg:mx-16 flex flex-col">
+    <!-- Introduction -->
+    <section class="card self-start mb-2">
+      <h2>Hi!</h2>
+      <p>I'm a 16 year old computer science, programming and Linux enthusiast</p>
+    </section>
+
+    <section class="card self-end">
+      <h3>Favourite Games</h2>
+      <ul class="list-inside list-disc">
+        <li>Half-Life</li>
+        <li>Yume Nikki</li>
+        <li>Dying Light</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="mt-4 md:mt-16 italic text-center">
+    <p>curious much?</p>
   </footer>
 </DefaultLayout>

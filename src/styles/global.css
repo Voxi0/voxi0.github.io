@@ -6,24 +6,42 @@
   src: url("/fonts/roboto-slab/RobotoSlab-Regular.woff2") format("woff2");
   font-display: swap;
 }
-@font-face {
-  font-family: "Yarndings";
-  src: url("/fonts/Yarndings20-Regular.woff2") format("woff2");
-  font-display: swap;
-}
 
 /* Colors and typography */
 @theme {
   /* Fonts */
-  --font-yarndings: "Yarndings";
+  --font-roboto-slab: "Roboto Slab";
 
   /* Colors */
   --color-*: initial;
+  --color-bg: #000;
+  --color-fg: #fff;
+  --color-card: #011;
 }
 
 /* Global styles */
 :root {
-  background-color: #000;
-  color: #fff;
-  font-family: "Roboto Slab", serif;
+  @apply bg-bg text-fg font-roboto-slab;
+}
+h1 {
+  @apply text-4xl font-bold;
+}
+h2 {
+  @apply text-2xl font-semibold;
+}
+h3 {
+  @apply text-xl font-medium;
+}
+h4 {
+  @apply text-lg font-medium;
+}
+p {
+  @apply text-base;
+}
+
+/* Custom styles */
+.card {
+  @apply bg-card;
+  @apply border border-solid border-fg rounded-sm;
+  @apply w-full md:max-w-128 p-2;
 }
