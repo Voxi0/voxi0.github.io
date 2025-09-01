@@ -1,0 +1,14 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+import { getCollection } from "astro:content";
+const blogPosts = await getCollection("blog");
+---
+<DefaultLayout title="Blog">
+  <section class="text-center">
+    <ul class="list-disc list-inside">
+      {blogPosts.map(post => (
+        <li><a href={`/blog/${post.id}`} class="hover:text-blue-400">{post.data.title}</a></li>
+      ))}
+    </ul>
+  </section>
+</DefaultLayout>

@@ -1,0 +1,29 @@
+---
+import DefaultLayout from "../../layouts/DefaultLayout.astro";
+import { getCollection, getEntry, render } from "astro:content";
+
+// Static paths for all blog posts
+export async function getStaticPaths() {
+  const posts = await getCollection("blog");
+  return posts.map(post => ({
+    params: { slug: post.id },
+  }));
+}
+
+// Load the individual post using the slug
+const { slug } = Astro.params;
+const post = await getEntry("blog", slug)
+if(!post) throw new Error(`Couldn't find blog post "${slug}"`);
+const { Content } = await render(post);
+---
+<DefaultLayout title={post.data.title} desc={post.data.desc}>
+  <article>
+    <header class="text-center mb-4">
+      <h1>{post.data.title}</h1>
+      <p>By {post.data.author} on {post.data.pubDate.toDateString()}</p>
+    </header>
+    <section class="markdown">
+      <Content/>
+    </section>
+  </article>
+</DefaultLayout>
