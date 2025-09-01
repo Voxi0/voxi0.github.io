@@ -1,0 +1,19 @@
+---
+import DefaultLayout from "../layouts/DefaultLayout.astro";
+const messages = [
+  "welcome to the void",
+  "watcha looking for?",
+  "exploring uncharted territory eh?",
+  "you shouldn't be here",
+  "the cake is a lie",
+  "hocus pocus",
+  "there's nothing here",
+  "expecting something?",
+  "nothing to see here bud",
+  "nice try",
+];
+---
+<DefaultLayout title="404">
+  <h2 class="text-center">404 - Page not found</h3>
+  <h1 class="text-center">{messages[Math.random() * messages.length | 0]}</h1>
+</DefaultLayout>
