@@ -1,0 +1,17 @@
+---
+import { Image } from "astro:assets";
+import pfp from "../assets/pfp.webp";
+---
+<header class="flex justify-center my-4">
+  <a href="/" class="flex items-center">
+    <Image
+        priority
+        loading="eager"
+        densities={[1.5, 2]}
+        src={pfp}
+        alt="Voxi0's profile"
+        class="rounded-full m-2"
+    />
+    <h1>Voxi0</h1>
+  </a>
+</header>
